@@ -287,8 +287,8 @@ body{
     transform: scale(1.005);
 }
 .popular__right-text{
-    width: 75%;
-    height: 30%;
+    width: 85%;
+    height: 35%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -297,6 +297,12 @@ body{
     font-family: Cuprum;
     font-size: 2vw;
     color: white;
+}
+.popular__left-item{
+    color: black;
+}
+.right__news-name{
+    color: black;
 }
 .popular__right-date{
     font-size: 0.89vw;
