@@ -14,17 +14,21 @@
 </head>
 <body>
     <div id="inversion-wrapper">
+      <!-- Верхнее меню страницы -->
     <header class="header">
         <div class="header__container">
+          <!-- Логотип сайта -->
             <div class="header__name">KazNews</div>
+            <!-- Смена темы -->
             <button id="switchTheme" onclick="toggleTheme()">🌓</button>
-
+          <!-- Меню  -->
             <div class="header__menu">
                 <a href="eu.html" class="header__menu-item"><span class="txt">Home</span></a>
                 <a href="category-eu.html" class="header__menu-item" id="active"><span class="txt">Categories</span></a>
                 <a href="404.html" class="header__menu-item"><span class="txt">Popular</span></a>
                 <a href="404.html" class="header__menu-item"><span class="txt">Latest</span></a>
                <div class="switch"> 
+                <!-- Смена языка -->
                 <div class="header__menu-item--select">
                 <select onchange="location = this.value;">
                     <option value="category-eu.html" selected>EN</option>
@@ -36,7 +40,7 @@
             <div class="header__login" id="loginArea"></div>
     </header>
 
-
+<!-- основной блок  -->
 <main class="main">
         <div class="main__container">
             <a href="404.html" class="main__container-item" id="one">
@@ -71,6 +75,7 @@
             </a>
     </div>
 </main>
+<!-- Нижняя часть сайта -->
     <footer class="footer">
         <div class="footer__container">
             <div class="left">
@@ -82,6 +87,7 @@
             </div>
         </div>
     </footer>
+    <!-- Админ-панель (Работает только если почта пользователя - zyablikov04@gmail.com) -->
     <div id="editorArea" style="max-width: 800px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: Arial, sans-serif; display: none;">
   <h2 style="margin-bottom: 20px; font-size: 28px; color: #333;">📝 Creating an article</h2>
   <input type="text" id="articleTitle" placeholder="Article title"
@@ -145,6 +151,7 @@
   ">Publish</button>
 </div>
 <script>
+  // Регистрация и авторизация
   const loginArea = document.getElementById('loginArea');
   const user = JSON.parse(localStorage.getItem('currentUser'));
   const loggedIn = localStorage.getItem('loggedIn');
@@ -167,6 +174,7 @@
   } else {
     loginArea.innerHTML = '<a class="login" href="login-eu.html">Login</a>';
   }
+  // Работа админ панели
 function format(command, value = null) {
   document.execCommand(command, false, value);
   updateButtons();
@@ -188,7 +196,7 @@ function updateButtons() {
     }
   });
 }
-// Обновление по движению курсора и клику
+
 const editor = document.getElementById('articleContent');
 editor.addEventListener('keyup', updateButtons);
 editor.addEventListener('mouseup', updateButtons);
@@ -243,6 +251,7 @@ editor.addEventListener('mouseup', updateButtons);
 });
 
 </script>
+<!-- Тёмная тема -->
 <script>
   function toggleTheme() {
   document.body.classList.toggle('dark-theme');
