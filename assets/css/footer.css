@@ -1,0 +1,119 @@
+.footer{
+    width: 100vw;
+    aspect-ratio: 15/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    background-color: #E1E8F0;
+    background-image: url(../img/index__img/герб.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+    font-family: Cuprum;
+}
+.footer__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+
+}
+.footer__left-text{
+    width: 50%;
+    height: 50%;
+    font-size: 2.5vw;
+    letter-spacing: 12px;
+}
+.left{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer__input{
+    width: 50%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+
+}
+.footer__input input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.5vw;
+    text-align: center;
+}
+#footer{
+    width: 40%;
+    text-align: center;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+@media screen and (max-width:1200px){
+    .footer{
+    margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .footer__left-text{
+    font-size: 2.5vw;
+    letter-spacing: 3px;
+    
+}
+.footer{
+    aspect-ratio: 2/1;
+}
+.left{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__container{
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer__input{
+    width: 70%;
+    height: 20%;
+}
+.footer__left-text{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+}
+.footer__input{
+    font-size: 3vw;
+}
+.footer__input input{
+    font-size: 3vw;
+}
+.footer{
+    background-color: #E1E8F0;
+}
+#footer a{
+    color: white;
+}
+}

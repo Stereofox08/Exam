@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="kz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Құжат</title>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__name">KazNews</div>
+            <button id="switchTheme" onclick="toggleTheme()">🌓</button>
+            <div class="header__menu">
+                <a href="kz.html" class="header__menu-item" id="active"><span class="txt">Басты бет</span></a>
+                <a href="category-kz.html" class="header__menu-item"><span class="txt">Санаттар</span></a>
+                <a href="404.html" class="header__menu-item"><span class="txt">Танымал жаңалықтар</span></a>
+                <a href="404.html" class="header__menu-item"><span class="txt">Соңғы жаңалықтар</span></a>
+               <div class="switch"> 
+
+                <div class="header__menu-item--select">
+                <select onchange="location = this.value;">
+                    <option value="kz.html">KZ</option>
+                    <option value="eu.html">EN</option>
+                    <option value="index.html">RU</option>
+                  </select>
+                </div>
+            </div>
+            </div>
+            <div class="header__login" id="loginArea"></div>
+
+    </header>
+    <main class="main">
+        <div class="main__container">
+            
+            <a href="assets/Articles/kz/1.html" class="main__left">
+                <div class="main__left-text">
+                    Қазақстан: кіру оңай — кеткің келмейді
+                </div>
+            </a>
+            <div class="main__right">
+                <div class="main__right-header">Бүгін</div>
+                <div class="main__right-news">
+                    <div class="right__news-img"><img src="assets/img/index__img/newsright1.webp" alt=""></div>
+                    <div class="right__news-date">14.05.2025</div>
+                    <div class="right__news-name">Тоқаев министр Қарабаевқа сөгіс жариялады</div>
+                </div>
+                <div class="main__right-news">
+                    <div class="right__news-img"><img src="assets/img/index__img/newsright2.png" alt=""></div>
+                    <div class="right__news-date">14.05.2025</div>
+                    <div class="right__news-name">Қазақстанда тағы бір ақылы жол пайда болады</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="category">
+        <div class="category__container">
+
+            <div class="category__name">Санат</div>
+
+            <div class="category__menu">
+                <div class="category__menu-item">
+                    <div class="category__item-name">ЭКОНОМИКА</div>
+                    <div class="category__item-img"><img src="assets/img/index__img/Экономика.jpeg" alt=""></div>
+                </div>
+
+                <div class="category__menu-item">
+                    <div class="category__item-name">САЯСАТ</div>
+                    <div class="category__item-img"><img src="assets/img/index__img/Политика.jpg" alt=""></div>
+                </div>
+
+                <div class="category__menu-item">
+                    <div class="category__item-name">МӘДЕНИЕТ</div>
+                    <div class="category__item-img"><img src="assets/img/index__img/Культура.jpeg" alt=""></div>
+                </div>
+
+                <div class="category__menu-item">
+                    <div class="category__item-name">СПОРТ</div>
+                    <div class="category__item-img"><img src="assets/img/index__img/Спорт.jpg" alt=""></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="popular">
+        <div class="popular__container">
+            <div class="popular__left">
+                <div class="popular__category-name">Танымал жаңалықтар</div>
+                <div class="popular__left-item">
+                    <div class="popular__item-img"><img src="assets/img/index__img/pupular1.webp" alt=""></div>
+                    <div class="popular__left-text">
+                    <div class="popular__item-date">14.05.2025</div>
+                    <div class="popular__item-text">2025 жылдың қаңтар-сәуір айларында Қазақстанда 2 млн тоннадан астам бензин өндірілді</div>
+                    <div class="popular__item-subtext">Министрлік төрт айда ірі мұнай өңдеу зауыттарының жұмыс нәтижелерін қорытындылады</div>
+                </div>
+                </div>
+                <div class="popular__left-item">
+                    <div class="popular__item-img"><img src="assets/img/index__img/pupular2.webp" alt=""></div>
+                    <div class="popular__left-text">
+                    <div class="popular__item-date">14.05.2025</div>
+                    <div class="popular__item-text">Қазақстан сұйытылған мұнай газын шығаруға тыйымды тағы жарты жылға ұзартты</div>
+                    <div class="popular__item-subtext">Алдыңғы шектеудің мерзімі бүгін аяқталады</div>
+                </div>
+                </div>
+                <div class="popular__left-item">
+                    <div class="popular__item-img"><img src="assets/img/index__img/pupular3.webp" alt=""></div>
+                    <div class="popular__left-text">
+                    <div class="popular__item-date">14.05.2025</div>
+                    <div class="popular__item-text">Қазақстанда қоғамдық орындарда бет әлпетті тану үшін ЖИ қолдануға тыйым салынады</div>
+                    <div class="popular__item-subtext">Мәжіліс жасанды интеллект туралы заң жобасын қабылдады</div>
+                </div>
+                </div>
+            </div>
+            <div class="popular__right">
+                <div class="popular__right-text">
+                <div class="popular__right-date">14.05.2025</div>
+                <div class="popular__right-name">Кентау өндірістік аймағы 50 жылға экологиялық апат аймағы деп жарияланды</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="left">
+            <div class="footer__left-text">ЖАҢАЛЫҚ ЖІБЕРІЛІМІНЕ ЖАЗЫЛУ</div>
+            <div class="footer__input">
+            <input type="email" name="" id="" placeholder="asdfg123@gmail.com">
+            <span id="footer"><a href="404.html">Жазылу</a></span>
+            </div>
+            </div>
+        </div>
+    </footer>
+  <!-- Панель редактора -->
+<div id="editorArea" style="max-width: 800px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: Arial, sans-serif; display: none;">
+  <h2 style="margin-bottom: 20px; font-size: 28px; color: #333;">📝 Мақала құру</h2>
+
+  <input type="text" id="articleTitle" placeholder="Мақаланың тақырыбы"
+    style="width: 100%; padding: 12px 16px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 12px; font-size: 16px;">
+
+  <!-- Панель форматирования -->
+  <div style="margin-bottom: 10px;">
+  <button id="boldBtn" onclick="format('bold')"><b>B</b></button>
+  <button id="italicBtn" onclick="format('italic')"><i>I</i></button>
+  <button id="underlineBtn" onclick="format('underline')"><u>U</u></button>
+  <button id="ulBtn" onclick="format('insertUnorderedList')">• List</button>
+  <button id="h2Btn" onclick="format('formatBlock','h2')">H2</button>
+  <button id="quoteBtn" onclick="format('formatBlock','blockquote')">❝ Quote</button>
+
+    <style>
+  #editorArea button {
+    margin-right: 6px;
+    padding: 6px 10px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
+
+  #editorArea button:hover {
+    background: #e0e0e0;
+  }
+
+  #editorArea button.active {
+    background: #333;
+    color: #fff;
+  }
+</style>
+  </div>
+
+  <!-- Контент статьи с возможностью редактирования -->
+  <div id="articleContent" contenteditable="true"
+    style="min-height: 200px; padding: 12px 16px; border: 1px solid #ccc; border-radius: 12px; font-size: 16px;"></div>
+
+  <!-- Фото -->
+<label for="articleImage" style="
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 20px;
+">📎 Сурет таңдау</label>
+<span id="fileName" style="margin-left: 10px; font-style: italic;">Файл таңдалмаған</span>
+
+<!-- Скрытый input -->
+<input type="file" id="articleImage" accept="image/*" style="display: none;">
+
+  <div id="imagePreview" style="margin-top: 20px; display: none;">
+    <p style="margin-bottom: 10px;">📸 Предпросмотр изображения:</p>
+    <img id="previewImg" src="" alt="Image Preview"
+      style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  </div>
+
+  <button onclick="submitArticle()" style="
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  ">Жариялау</button>
+</div>
+<script>
+  const loginArea = document.getElementById('loginArea');
+  const user = JSON.parse(localStorage.getItem('currentUser'));
+  const loggedIn = localStorage.getItem('loggedIn');
+
+  function logout() {
+    localStorage.removeItem('loggedIn');
+    localStorage.removeItem('currentUser');
+    location.reload();
+  }
+
+  if (user && loggedIn === 'true') {
+    loginArea.innerHTML = `
+      <div>${user.nickname}</div>
+      <div style="margin-left:10px; cursor:pointer" onclick="logout()">✕</div>
+    `;
+
+   if (user.email === 'zyablikov04@gmail.com') { 
+   editorArea.style.display = 'block'; 
+   document.querySelector(".main").style.display = "none" 
+   document.querySelector(".category").style.display = "none" 
+   document.querySelector(".popular").style.display = "none" 
+   document.querySelector(".footer").style.display = "none" } 
+  } else {
+    loginArea.innerHTML = '<a class="login" href="login-kz.html">Кіру</a>';
+  }
+
+function format(command, value = null) {
+  document.execCommand(command, false, value);
+  updateButtons(); // Обновим состояние кнопок
+}
+function updateButtons() {
+  const buttons = [
+    { id: 'boldBtn', command: 'bold' },
+    { id: 'italicBtn', command: 'italic' },
+    { id: 'underlineBtn', command: 'underline' },
+    { id: 'ulBtn', command: 'insertUnorderedList' },
+  ];
+
+  buttons.forEach(({ id, command }) => {
+    const isActive = document.queryCommandState(command);
+    const btn = document.getElementById(id);
+    if (isActive) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+}
+
+// Обновление по движению курсора и клику
+const editor = document.getElementById('articleContent');
+editor.addEventListener('keyup', updateButtons);
+editor.addEventListener('mouseup', updateButtons);
+
+  function submitArticle() {
+    const title = document.getElementById('articleTitle').value.trim();
+    const content = document.getElementById('articleContent').innerHTML.trim();
+    const imageInput = document.getElementById('articleImage');
+    const imageFile = imageInput.files[0];
+
+    if (!title || !content) {
+      alert('Барлық өрістерді толтырыңыз.');
+      return;
+    }
+
+    if (imageFile) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        alert('Мақала суретпен жарияланған!');
+        console.log({ title, content, image: e.target.result });
+      };
+      reader.readAsDataURL(imageFile);
+    } else {
+      alert('Мақала суретсіз жарияланды!');
+      console.log({ title, content });
+    }
+
+    document.getElementById('articleTitle').value = '';
+    document.getElementById('articleContent').innerHTML = '';
+    imageInput.value = '';
+    document.getElementById('imagePreview').style.display = 'none';
+  }
+
+document.getElementById('articleImage').addEventListener('change', function () {
+  const file = this.files[0];
+  const preview = document.getElementById('imagePreview');
+  const previewImg = document.getElementById('previewImg');
+  const fileName = document.getElementById('fileName');
+
+  if (file) {
+    fileName.textContent = file.name;
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      previewImg.src = e.target.result;
+      preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  } else {
+    fileName.textContent = 'Файл таңдалмаған';
+    preview.style.display = 'none';
+  }
+});
+</script>
+<script>
+  function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+  localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+  }
+});
+</script>
+</body>
+</html>

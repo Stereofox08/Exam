@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kazakhstan: Easy to Enter — Hard to Leave</title>
+  <link rel="stylesheet" href="../../css/articles.css" />
+    <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/header.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__name">KazNews</div>
+      <button id="switchTheme" onclick="toggleTheme()">🌓</button>
+      <div class="header__menu">
+        <a href="../../../eu.html" class="header__menu-item"><span class="txt">Home</span></a>
+        <a href="../../../category-eu.html" class="header__menu-item"><span class="txt">Categories</span></a>
+        <a href="../../../404.html" class="header__menu-item"><span class="txt">Popular</span></a>
+        <a href="../../../404.html" class="header__menu-item"><span class="txt">Latest</span></a>
+                <div class="switch">
+
+        <div class="header__menu-item--select">
+          <select onchange="location = this.value;">
+          <option value="../ru/1.html">RU</option>
+          <option value="../kz/1.html">KZ</option>
+          <option value="1.html" selected>EN</option>
+          </select>
+        </div>
+        </div>
+      </div>
+      <div class="header__login" id="loginArea"></div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="main__container">
+<div class="main__container-img carousel">
+                <button class="carousel__btn carousel__btn--left">&#10094;</button>
+                <img src="../../img/index__img/news1.png" alt="" class="carousel__image active">
+                <img src="../../img/artitles/news2.jpg" alt="" class="carousel__image">
+                <img src="../../img/artitles/news3.jpg" alt="" class="carousel__image">
+                <img src="../../img/artitles/news4.jpg" alt="" class="carousel__image">
+                <button class="carousel__btn carousel__btn--right">&#10095;</button>
+            </div>
+      <div class="main__container-text">
+        <h1>Kazakhstan: Easy to Enter — Hard to Leave</h1>
+        Modern Kazakhstan is becoming increasingly attractive not only for tourists but also for expats, students, and digital nomads. Simplified visa regimes, growing infrastructure, rich cultural heritage, and the hospitality of the locals make the country comfortable and accessible for visitors.
+        <br><br>
+        <h2>Easy entry is one of the key advantages</h2>
+        Citizens of CIS countries and several others can enter Kazakhstan without a visa for up to 30 or 90 days. The government actively develops tourism and international cooperation, reducing bureaucratic hurdles. Direct flights, improved border services, and a straightforward registration process make entry smooth even for newcomers.
+        <br><br>
+        <h2>Hospitality and openness</h2>
+        Kazakh people are known for their friendliness and willingness to help. In major cities like Almaty, Astana, and Shymkent, you’ll meet people of various nationalities and religions, creating an atmosphere of diversity and tolerance. Foreigners often say they feel at home in Kazakhstan despite linguistic and cultural differences.
+        <br><br>
+        <h2>Nature and culture — reasons to stay longer</h2>
+        From endless steppes to the majestic Tian Shan mountains, from salt lakes to stunning canyons — Kazakhstan’s nature is astonishing. You can enjoy winter resorts, summer hikes, eco-tourism, and gastronomic festivals. The country’s cultural heritage is a blend of nomadic history, Islamic traditions, and Soviet influence.
+        <br><br>
+        <h2>Opportunities for work and life</h2>
+        The IT, education, logistics, and energy sectors are growing rapidly. Many foreigners come to work in major companies or start their own businesses. Students can join international programs, and the quality of education in top universities improves each year. The cost of living is also lower than in most European countries, making it especially attractive for freelancers and startups.
+        <br><br>
+        <h2>Conclusion</h2>
+        Kazakhstan is a country easy to enter — and hard to leave. Comfort, safety, nature, growth opportunities, and unmatched hospitality make it an increasingly popular destination for living and travel. If you’re looking for new inspiration and want to experience the true spirit of Eurasia — Kazakhstan welcomes you with an open heart.
+      </div>
+      <div class="comment">
+        <div class="comment__name"><h1>Comments (0)</h1></div>
+        <input type="text" placeholder="Leave a comment">
+      </div>
+    </div>
+  </main>
+
+<script>
+        const loginArea = document.getElementById('loginArea');
+        const user = JSON.parse(localStorage.getItem('currentUser'));
+        const loggedIn = localStorage.getItem('loggedIn');
+
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            localStorage.removeItem('currentUser');
+            location.reload();
+        }
+
+        if (user && loggedIn === 'true') {
+            loginArea.innerHTML = `
+              <div>${user.nickname}</div>
+              <div style="margin-left:10px; cursor:pointer" onclick="logout()">✕</div>
+            `;
+        } else {
+            loginArea.innerHTML = '<a class="login" href="../../../login.html">Войти</a>';
+        }
+
+        // Слайдер
+        const images = document.querySelectorAll('.carousel__image');
+        const leftBtn = document.querySelector('.carousel__btn--left');
+        const rightBtn = document.querySelector('.carousel__btn--right');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        leftBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        rightBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+    </script>
+<script>
+  function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+  localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+  }
+});
+</script>
+</body>
+</html>

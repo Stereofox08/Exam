@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    aspect-ratio: 10/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Cuprum;
+}
+.main__container-item{
+    width: 17%;
+    height: 45%;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+
+}
+.text{
+    background-color: #E1E8F0;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1vw;
+    transition: 0.3s;
+}
+.main__container-item:hover .text{
+    height: 100%;
+}
+#one{
+    background-image: url(../img/index__img/Экономика.jpeg);
+}
+#two{
+    background-image: url(../img/index__img/Политика.jpg);
+}
+#three{
+    background-image: url(../img/index__img/Культура.jpeg);
+}
+#four{
+    background-image: url(../img/index__img/Спорт.jpg);
+}
+#five{
+    background-image: url(../img/category/5.jpg);
+}
+#six{
+    background-image: url(../img/category/6.jpg);
+}
+#seven{
+    background-image: url(../img/category/7.jpg);
+}
+#eight{
+    background-image: url(../img/category/8.jpg);
+}
+#nine{
+    background-image: url(../img/category/9.jpeg);
+}
+#ten{
+    background-image: url(../img/category/10.jpg);
+}
+@media screen and (max-width:1200px) {
+    .main{
+    aspect-ratio: 1/1;
+    }
+    .main__container-item{
+        width: 40%;
+        height: 15%;
+    }
+        .main__container{
+        height: 100%;
+
+    }
+    .text{
+        font-size: 3vw;
+    }
+    }
+@media screen and (max-width:800px){
+    .main{
+        aspect-ratio: 1/3;
+    }
+    .main__container{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .main__container-item{
+        width: 60%;
+        height: 7%;
+    }
+}

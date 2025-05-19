@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Регистрация</h2>
+    <input type="text" id="nickname" placeholder="Nickname" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Пароль" required>
+    <button class="s" onclick="register()">Зарегистрироваться</button>
+    <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+  </div>
+
+  <script>
+  function register() {
+    const nickname = document.getElementById('nickname').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (nickname && email && password) {
+      const newUser = { nickname, email, password };
+      let users = JSON.parse(localStorage.getItem('users')) || [];
+
+      // Проверка: существует ли такой email
+      const existingUser = users.find(user => user.email === email);
+      if (existingUser) {
+        alert('Пользователь с таким email уже существует.');
+        return;
+      }
+
+      users.push(newUser);
+      localStorage.setItem('users', JSON.stringify(users));
+      alert('Регистрация успешна!');
+      window.location.href = 'login.html';
+    } else {
+      alert('Пожалуйста, заполните все поля.');
+    }
+  }
+</script>
+
+</body>
+</html>

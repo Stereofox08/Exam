@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тіркелу</title>
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Тіркелу</h2>
+    <input type="text" id="nickname" placeholder="Лақап аты" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Құпия сөз" required>
+    <button class="s" onclick="register()">Тіркелу</button>
+    <p>Тіркелгіңіз бар ма? <a href="login-kz.html">Кіру</a></p>
+  </div>
+
+  <script>
+    function register() {
+      const nickname = document.getElementById('nickname').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (nickname && email && password) {
+        const newUser = { nickname, email, password };
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        const existingUser = users.find(user => user.email === email);
+        if (existingUser) {
+          alert('Бұл email қолданушысы бұрыннан бар.');
+          return;
+        }
+
+        users.push(newUser);
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Сәтті тіркелдіңіз!');
+        window.location.href = 'login-kz.html';
+      } else {
+        alert('Барлық өрістерді толтырыңыз.');
+      }
+    }
+  </script>
+</body>
+</html>

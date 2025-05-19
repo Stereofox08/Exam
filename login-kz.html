@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кіру</title>
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Кіру</h2>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Құпия сөз" required>
+    <button onclick="login()">Кіру</button>
+    <p>Тіркелгі жоқ па? <a href="register-kz.html">Тіркелу</a></p>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+
+      const foundUser = users.find(user => user.email === email && user.password === password);
+
+      if (foundUser) {
+        localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('currentUser', JSON.stringify(foundUser));
+        window.location.href = 'kz.html';
+      } else {
+        alert('Қате мәліметтер.');
+      }
+    }
+  </script>
+</body>
+</html>

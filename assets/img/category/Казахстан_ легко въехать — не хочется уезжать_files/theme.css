@@ -1,0 +1,102 @@
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme a {
+    color: #e0e0e0;
+}
+
+.dark-theme .header__menu a,
+.dark-theme .header__login,
+.dark-theme .login {
+    color: #ccc;
+}
+.dark-theme .header__menu{
+    background-color: #121212;
+}
+.dark-theme .header__menu a:hover,
+.dark-theme .header__login:hover,
+.dark-theme .login:hover {
+    color: #fff;
+}
+
+.dark-theme .main__left-text,
+.dark-theme .main__right-header,
+.dark-theme .main__right-news,
+.dark-theme .popular__item-text,
+.dark-theme .popular__item-subtext,
+.dark-theme .category__item-name,
+.dark-theme .popular__right-name {
+    color: #e0e0e0;
+}
+.dark-theme .main__right-news{
+    background-color:#121212;
+    color: #e0e0e0;
+
+}
+.dark-theme .right__news-date{
+    color: #e0e0e0;
+}
+.dark-theme .footer {
+    background-color: #1e1e1e;
+}
+.dark-theme select {
+    background-color: #121212;
+    color: white;
+}
+.dark-theme input[type="email"] {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+.dark-theme .header__name{
+    color: white;
+}
+.dark-theme #active {
+    color: rgb(255, 255, 255);
+}
+.dark-theme #editorArea {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.dark-theme .category__menu-item {
+    background-color: #1f1f1f;
+
+}
+.dark-theme #editorArea button {
+    background-color: #333;
+    color: #fff;
+}
+.dark-theme .main__right-header{
+    background-color: #1d1d1d;
+}
+.dark-theme .popular__left{
+    background-color: #1d1d1d;
+
+}
+.dark-theme .footer__container{
+    background-color: #1d1d1d;
+
+}
+
+.dark-theme #switchTheme{
+    background-color: #121212;
+
+}
+.dark-theme .text{
+     background-color: #313131;
+     color: white;
+}
+.dark-theme .comment{
+    border-top: 3px solid rgb(255, 255, 255);
+}
+@media screen and (max-width:800px){
+.dark-theme .popular__left {
+    background-color: #121212;
+}
+.dark-theme .footer {
+    background-color: #121212;
+}
+}
